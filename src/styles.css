@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Industrial CAD / Blueprint Grid Texture */
+.bg-blueprint-dark {
+  background-color: #07090d;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.bg-blueprint-light {
+  background-color: #f8fafc;
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Photoluminescent IT-20 Glow Effect */
+.photoluminescent-glow {
+  box-shadow:
+    0 0 18px rgba(16, 185, 129, 0.35),
+    inset 0 0 12px rgba(16, 185, 129, 0.18);
+}
+
+/* Bespoke Interactive Icon Keyframe Animations */
+@keyframes k-spray {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateX(-2px) rotate(-8deg) scale(1.1);
+  }
+  50% {
+    transform: translateX(3px) rotate(6deg) scale(1.14);
+  }
+  75% {
+    transform: translateX(-1px) rotate(-4deg) scale(1.06);
+  }
+}
+
+@keyframes k-flame {
+  0%, 100% {
+    transform: scale(1) translateY(0) rotate(0deg);
+    filter: drop-shadow(0 0 0px rgba(225, 29, 46, 0));
+  }
+  30% {
+    transform: scale(1.16, 1.22) translateY(-2px) rotate(-5deg);
+    filter: drop-shadow(0 0 8px rgba(225, 29, 46, 0.65));
+  }
+  65% {
+    transform: scale(1.1, 1.18) translateY(-1px) rotate(5deg);
+    filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.6));
+  }
+}
+
+@keyframes k-pressure {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  30% {
+    transform: rotate(-18deg) scale(1.08);
+  }
+  65% {
+    transform: rotate(22deg) scale(1.15);
+  }
+  85% {
+    transform: rotate(12deg) scale(1.1);
+  }
+}
+
+@keyframes k-siren {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.18) rotate(-12deg);
+  }
+  40% {
+    transform: scale(1.22) rotate(12deg);
+  }
+  60% {
+    transform: scale(1.18) rotate(-10deg);
+  }
+  80% {
+    transform: scale(1.14) rotate(8deg);
+  }
+}
+
+@keyframes k-valve {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.14);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes k-shield {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  35% {
+    transform: scale(1.18) translateY(-3px);
+  }
+  65% {
+    transform: scale(1.08) translateY(1px);
+  }
+}
+
+@keyframes k-stamp {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-5px) scale(1.12) rotate(-6deg);
+  }
+  55% {
+    transform: translateY(2px) scale(0.95) rotate(2deg);
+  }
+  75% {
+    transform: translateY(-1px) scale(1.06) rotate(0deg);
+  }
+}
+
+@keyframes k-radar {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.15) rotate(15deg);
+  }
+  50% {
+    transform: scale(1.06) rotate(-15deg);
+  }
+  75% {
+    transform: scale(1.18) rotate(8deg);
+  }
+}
+
+@keyframes k-wrench {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-24deg) scale(1.12);
+  }
+  55% {
+    transform: rotate(18deg) scale(1.15);
+  }
+  80% {
+    transform: rotate(-10deg) scale(1.08);
+  }
+}
+
+@keyframes k-truck {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(3px) translateY(-1px);
+  }
+  50% {
+    transform: translateX(-2px) translateY(0);
+  }
+  75% {
+    transform: translateX(4px) translateY(-1px);
+  }
+}
+
+@keyframes k-flow {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-3px) scale(1.14, 1.06);
+  }
+  75% {
+    transform: translateY(2px) scale(1.06, 1.12);
+  }
+}
+
+.icon-anim-spray {
+  animation: k-spray 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-flame {
+  animation: k-flame 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-pressure {
+  animation: k-pressure 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-siren {
+  animation: k-siren 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-valve {
+  animation: k-valve 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-shield {
+  animation: k-shield 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-stamp {
+  animation: k-stamp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-radar {
+  animation: k-radar 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-wrench {
+  animation: k-wrench 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-truck {
+  animation: k-truck 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.icon-anim-flow {
+  animation: k-flow 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-anim-spray,
+  .icon-anim-flame,
+  .icon-anim-pressure,
+  .icon-anim-siren,
+  .icon-anim-valve,
+  .icon-anim-shield,
+  .icon-anim-stamp,
+  .icon-anim-radar,
+  .icon-anim-wrench,
+  .icon-anim-truck,
+  .icon-anim-flow {
+    animation: none !important;
+  }
+}
